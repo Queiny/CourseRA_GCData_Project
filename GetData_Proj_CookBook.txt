@@ -1,0 +1,18 @@
+1. Download the datasets from class website.
+
+2. Understand the data structure.
+a. In main directory, 'features.txt' list the measurement variable name. The data are in /test and /train 'X_test.txt' and 'X_train.txt', which have 561 data.
+b. In main directory, 'activity_labels.txt', list the name of 6 activities. The data are in /test and /train as 'y_test.txt' and 'y_train.txt'.
+c. In /test and /train directory, 'subject_test.txt' and 'sunject_train.txt' are the list of participants/subjects in the activity.
+
+3. Read in the measurements from both /test and /train directories.
+
+4. Merge the /test and /train data by 'rbind', and get 'X_all', 'y_all', 'subject_all' datasets.
+
+5. From the 'features.txt' selects only the 'mean' and 'std' from all features( 66/561). Select subset of X_all to get X_sel ('Mean' and 'std' only). Name each column with the descriptive meaning. 
+
+6. Convert the activity from integer (1-6) to the activity label, 'WALKING', 'WALKING_UPSTAIRS', etc., which is read in from the file 'activity_labels.txt'
+
+7. Merge 'Subject_label' (1-30), 'Activity_label' ('WALKING', 'WALKING_UPSTAIRS', etc. 6 of them), and X data (measurement of mean and std of 66 variables).
+
+8. Calculate the mean of each variables by each 'Subject', and each 'Activitity'.
